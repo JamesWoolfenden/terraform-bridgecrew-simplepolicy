@@ -37,15 +37,13 @@ module "policy" {
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements
 
-| Name | Version |
-|------|---------|
-| <a name="requirement_bridgecrew"></a> [bridgecrew](#requirement\_bridgecrew) | 0.1.9 |
+No requirements.
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_bridgecrew"></a> [bridgecrew](#provider\_bridgecrew) | 0.1.9 |
+| <a name="provider_bridgecrew"></a> [bridgecrew](#provider\_bridgecrew) | n/a |
 
 ## Modules
 
@@ -55,7 +53,7 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [bridgecrew_simple_policy.new](https://registry.terraform.io/providers/JamesWoolfenden/bridgecrew/0.1.9/docs/resources/simple_policy) | resource |
+| [bridgecrew_simple_policy.new](https://registry.terraform.io/providers/hashicorp/bridgecrew/latest/docs/resources/simple_policy) | resource |
 
 ## Inputs
 
