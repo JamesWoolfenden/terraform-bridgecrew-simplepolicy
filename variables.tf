@@ -1,0 +1,93 @@
+variable "conditions" {
+  description = "Simple policy block"
+}
+
+variable "cis_aws_v12" {
+  default = []
+}
+
+variable "cis_aws_v13" {
+  default = []
+}
+
+variable "cis_azure_v11" {
+  default = []
+}
+
+variable "cis_azure_v12" {
+  default = []
+}
+
+variable "cis_azure_v13" {
+  default = []
+}
+
+variable "cis_docker_v11" {
+  default = []
+}
+
+variable "cis_eks_v11" {
+  default = []
+}
+
+variable "cis_gcp_v11" {
+  default = []
+}
+
+variable "cis_gke_v11" {
+  default = []
+}
+
+variable "cis_kubernetes_v15" {
+  default = []
+}
+
+variable "cis_kubernetes_v16" {
+  default = []
+}
+
+variable "guidelines" {
+  type        = string
+  description = "A good description justifying the check and outlining how to resolve"
+    validation {
+    condition = (
+    length(var.guidelines) > 50)
+    error_message = "Title should attempt be meaningful (gt 20 chars)."
+  }
+}
+
+
+variable "title" {
+  type        = string
+  description = "The title of the check"
+  validation {
+    condition = (
+    length(var.title) > 20)
+    error_message = "TTitle should attempt be meaningful (gt 20 chars)."
+  }
+}
+
+variable "severity" {
+  type = string
+  validation {
+    condition     = contains(["critical","high","low","medium"], var.severity)
+    error_message = "The severity must be one of critical, high, low or medium."
+  }
+}
+
+variable "category" {
+  type = string
+  validation {
+    condition     = contains(["logging","elasticsearch","general","storage","encryption","networking","monitoring","kubernetes","serverless","backup_and_recovery","iam","secrets","public","general_security"], var.category)
+    error_message = "The category must be one of logging, elasticsearch, general, storage, encryption, networking, monitoring, kubernetes, serverless, backup_and_recovery, iam, secrets, public or general_security."
+  }
+}
+
+variable "cloud_provider" {
+  type = string
+  validation {
+    condition     = contains(["aws", "gcp", "linode", "azure", "oci", "alicloud", "digitalocean"], var.cloud_provider)
+    error_message = "The cloud provider must be one the currently supported; aws, gcp, linode, azure, oci, alicloud and digitalocean."
+  }
+
+}
