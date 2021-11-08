@@ -49,7 +49,7 @@ variable "cis_kubernetes_v16" {
 variable "guidelines" {
   type        = string
   description = "A good description justifying the check and outlining how to resolve"
-    validation {
+  validation {
     condition = (
     length(var.guidelines) > 50)
     error_message = "Title should attempt be meaningful (gt 20 chars)."
@@ -70,7 +70,7 @@ variable "title" {
 variable "severity" {
   type = string
   validation {
-    condition     = contains(["critical","high","low","medium"], var.severity)
+    condition     = contains(["critical", "high", "low", "medium"], var.severity)
     error_message = "The severity must be one of critical, high, low or medium."
   }
 }
@@ -78,7 +78,7 @@ variable "severity" {
 variable "category" {
   type = string
   validation {
-    condition     = contains(["logging","elasticsearch","general","storage","encryption","networking","monitoring","kubernetes","serverless","backup_and_recovery","iam","secrets","public","general_security"], var.category)
+    condition     = contains(["logging", "elasticsearch", "general", "storage", "encryption", "networking", "monitoring", "kubernetes", "serverless", "backup_and_recovery", "iam", "secrets", "public", "general_security"], var.category)
     error_message = "The category must be one of logging, elasticsearch, general, storage, encryption, networking, monitoring, kubernetes, serverless, backup_and_recovery, iam, secrets, public or general_security."
   }
 }

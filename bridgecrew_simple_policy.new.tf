@@ -28,4 +28,3 @@ resource "bridgecrew_simple_policy" "new" {
   }
 
 }
-

@@ -36,13 +36,15 @@ module "policy" {
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements
 
-No requirements.
+| Name | Version |
+|------|---------|
+| <a name="requirement_bridgecrew"></a> [bridgecrew](#requirement\_bridgecrew) | 0.1.9 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | n/a |
+| <a name="provider_bridgecrew"></a> [bridgecrew](#provider\_bridgecrew) | 0.1.9 |
 
 ## Modules
 
@@ -52,35 +54,35 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [aws_mq_broker.broker](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/mq_broker) | resource |
-| [aws_mq_configuration.broker](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/mq_configuration) | resource |
-| [aws_security_group.broker](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/security_group) | resource |
+| [bridgecrew_simple_policy.new](https://registry.terraform.io/providers/JamesWoolfenden/bridgecrew/0.1.9/docs/resources/simple_policy) | resource |
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_audit"></a> [audit](#input\_audit) | To enable audit logging | `bool` | `"false"` | no |
-| <a name="input_common_tags"></a> [common\_tags](#input\_common\_tags) | This is to help you add tags to your cloud objects | `map(any)` | n/a | yes |
-| <a name="input_ingress"></a> [ingress](#input\_ingress) | n/a | `list(any)` | n/a | yes |
-| <a name="input_logging"></a> [logging](#input\_logging) | To enable Logging to Cloudwatch | `bool` | `true` | no |
-| <a name="input_maintenance_window_start_time"></a> [maintenance\_window\_start\_time](#input\_maintenance\_window\_start\_time) | Describe the Maintenance window block | `map(any)` | <pre>{<br>  "day_of_week": "MONDAY",<br>  "time_of_day": "12:05",<br>  "time_zone": "GMT"<br>}</pre> | no |
-| <a name="input_mq_broker"></a> [mq\_broker](#input\_mq\_broker) | MQ broker details | `map(any)` | n/a | yes |
-| <a name="input_my_config"></a> [my\_config](#input\_my\_config) | MQ Config | `map(any)` | n/a | yes |
-| <a name="input_password"></a> [password](#input\_password) | n/a | `string` | n/a | yes |
-| <a name="input_security_group_name"></a> [security\_group\_name](#input\_security\_group\_name) | Broker Security group name | `string` | `"Broker"` | no |
-| <a name="input_subnet_ids"></a> [subnet\_ids](#input\_subnet\_ids) | Contains subnet ids | `list(any)` | n/a | yes |
-| <a name="input_username"></a> [username](#input\_username) | n/a | `string` | `"ExampleUser"` | no |
-| <a name="input_vpc_id"></a> [vpc\_id](#input\_vpc\_id) | The VPC id | `string` | n/a | yes |
+| <a name="input_category"></a> [category](#input\_category) | n/a | `string` | n/a | yes |
+| <a name="input_cis_aws_v12"></a> [cis\_aws\_v12](#input\_cis\_aws\_v12) | n/a | `list` | `[]` | no |
+| <a name="input_cis_aws_v13"></a> [cis\_aws\_v13](#input\_cis\_aws\_v13) | n/a | `list` | `[]` | no |
+| <a name="input_cis_azure_v11"></a> [cis\_azure\_v11](#input\_cis\_azure\_v11) | n/a | `list` | `[]` | no |
+| <a name="input_cis_azure_v12"></a> [cis\_azure\_v12](#input\_cis\_azure\_v12) | n/a | `list` | `[]` | no |
+| <a name="input_cis_azure_v13"></a> [cis\_azure\_v13](#input\_cis\_azure\_v13) | n/a | `list` | `[]` | no |
+| <a name="input_cis_docker_v11"></a> [cis\_docker\_v11](#input\_cis\_docker\_v11) | n/a | `list` | `[]` | no |
+| <a name="input_cis_eks_v11"></a> [cis\_eks\_v11](#input\_cis\_eks\_v11) | n/a | `list` | `[]` | no |
+| <a name="input_cis_gcp_v11"></a> [cis\_gcp\_v11](#input\_cis\_gcp\_v11) | n/a | `list` | `[]` | no |
+| <a name="input_cis_gke_v11"></a> [cis\_gke\_v11](#input\_cis\_gke\_v11) | n/a | `list` | `[]` | no |
+| <a name="input_cis_kubernetes_v15"></a> [cis\_kubernetes\_v15](#input\_cis\_kubernetes\_v15) | n/a | `list` | `[]` | no |
+| <a name="input_cis_kubernetes_v16"></a> [cis\_kubernetes\_v16](#input\_cis\_kubernetes\_v16) | n/a | `list` | `[]` | no |
+| <a name="input_cloud_provider"></a> [cloud\_provider](#input\_cloud\_provider) | n/a | `string` | n/a | yes |
+| <a name="input_conditions"></a> [conditions](#input\_conditions) | Simple policy block | `any` | n/a | yes |
+| <a name="input_guidelines"></a> [guidelines](#input\_guidelines) | A good description justifying the check and outlining how to resolve | `string` | n/a | yes |
+| <a name="input_severity"></a> [severity](#input\_severity) | n/a | `string` | n/a | yes |
+| <a name="input_title"></a> [title](#input\_title) | The title of the check | `string` | n/a | yes |
 
 ## Outputs
 
 | Name | Description |
 |------|-------------|
-| <a name="output_broker"></a> [broker](#output\_broker) | The Broker details |
-| <a name="output_configuration"></a> [configuration](#output\_configuration) | The broker configuration |
-| <a name="output_mq_password"></a> [mq\_password](#output\_mq\_password) | MQ password |
-| <a name="output_mq_username"></a> [mq\_username](#output\_mq\_username) | MQ Username |
+| <a name="output_policy"></a> [policy](#output\_policy) | n/a |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
 ## Related Projects
