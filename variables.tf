@@ -78,8 +78,8 @@ variable "severity" {
 variable "category" {
   type = string
   validation {
-    condition     = contains(["logging", "elasticsearch", "general", "storage", "encryption", "networking", "monitoring", "kubernetes", "serverless", "backup_and_recovery", "iam", "secrets", "public", "general_security"], var.category)
-    error_message = "The category must be one of logging, elasticsearch, general, storage, encryption, networking, monitoring, kubernetes, serverless, backup_and_recovery, iam, secrets, public or general_security."
+    condition     = contains(["logging", "elasticsearch", "general", "storage", "encryption", "networking", "monitoring", "kubernetes", "serverless", "backup_and_recovery", "iam", "secrets", "public"], var.category)
+    error_message = "The category must be one of logging, elasticsearch, general, storage, encryption, networking, monitoring, kubernetes, serverless, backup_and_recovery, iam, secrets, or public."
   }
 }
 
@@ -90,4 +90,17 @@ variable "cloud_provider" {
     error_message = "The cloud provider must be one the currently supported; aws, gcp, linode, azure, oci, alicloud and digitalocean."
   }
 
+}
+
+variable "frameworks" {
+  type        = list(string)
+  description = "List of supported frameworks for this check"
+
+  validation {
+    condition = length([
+      for o in var.frameworks : true
+      if contains(["Terraform", "Cloudformation"], o)
+    ]) == length(var.frameworks)
+    error_message = "The framework must be one or more of: Terraform, Cloudformation."
+  }
 }

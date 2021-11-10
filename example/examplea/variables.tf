@@ -25,3 +25,8 @@ variable "category" {
 variable "cloud_provider" {
   type = string
 }
+
+variable "frameworks" {
+  type        = list(any)
+  description = "List of support frameworks for this test"
+}

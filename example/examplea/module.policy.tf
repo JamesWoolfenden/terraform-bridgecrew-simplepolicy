@@ -6,4 +6,5 @@ module "policy" {
   title          = var.title
   severity       = var.severity
   category       = var.category
+  frameworks     = var.frameworks
 }

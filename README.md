@@ -39,13 +39,13 @@ module "policy" {
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_bridgecrew"></a> [bridgecrew](#requirement\_bridgecrew) | 0.1.12 |
+| <a name="requirement_bridgecrew"></a> [bridgecrew](#requirement\_bridgecrew) | 0.1.13 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_bridgecrew"></a> [bridgecrew](#provider\_bridgecrew) | 0.1.12 |
+| <a name="provider_bridgecrew"></a> [bridgecrew](#provider\_bridgecrew) | 0.1.13 |
 
 ## Modules
 
@@ -55,7 +55,7 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [bridgecrew_simple_policy.new](https://registry.terraform.io/providers/JamesWoolfenden/bridgecrew/0.1.12/docs/resources/simple_policy) | resource |
+| [bridgecrew_simple_policy.new](https://registry.terraform.io/providers/JamesWoolfenden/bridgecrew/0.1.13/docs/resources/simple_policy) | resource |
 
 ## Inputs
 
@@ -75,6 +75,7 @@ No modules.
 | <a name="input_cis_kubernetes_v16"></a> [cis\_kubernetes\_v16](#input\_cis\_kubernetes\_v16) | n/a | `list` | `[]` | no |
 | <a name="input_cloud_provider"></a> [cloud\_provider](#input\_cloud\_provider) | n/a | `string` | n/a | yes |
 | <a name="input_conditions"></a> [conditions](#input\_conditions) | Simple policy block | `any` | n/a | yes |
+| <a name="input_frameworks"></a> [frameworks](#input\_frameworks) | List of supported frameworks for this check | `list(string)` | n/a | yes |
 | <a name="input_guidelines"></a> [guidelines](#input\_guidelines) | A good description justifying the check and outlining how to resolve | `string` | n/a | yes |
 | <a name="input_severity"></a> [severity](#input\_severity) | n/a | `string` | n/a | yes |
 | <a name="input_title"></a> [title](#input\_title) | The title of the check | `string` | n/a | yes |
