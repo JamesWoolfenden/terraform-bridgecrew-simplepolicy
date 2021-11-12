@@ -1,20 +1,25 @@
 variable "conditions" {
+  type        = string
   description = "Simple policy block"
 }
 
 variable "cis_aws_v12" {
+  type    = list(any)
   default = []
 }
 
 variable "cis_aws_v13" {
+  type    = list(any)
   default = []
 }
 
 variable "cis_azure_v11" {
+  type    = list(any)
   default = []
 }
 
 variable "cis_azure_v12" {
+  type    = list(any)
   default = []
 }
 
@@ -31,18 +36,22 @@ variable "cis_eks_v11" {
 }
 
 variable "cis_gcp_v11" {
+  type    = list(any)
   default = []
 }
 
 variable "cis_gke_v11" {
+  type    = list(any)
   default = []
 }
 
 variable "cis_kubernetes_v15" {
+  type    = list(any)
   default = []
 }
 
 variable "cis_kubernetes_v16" {
+  type    = list(any)
   default = []
 }
 
