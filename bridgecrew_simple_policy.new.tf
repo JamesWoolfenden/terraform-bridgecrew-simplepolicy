@@ -4,7 +4,14 @@ resource "bridgecrew_simple_policy" "new" {
   severity       = var.severity
   category       = var.category
   frameworks     = var.frameworks
-  conditions     = var.conditions
+
+  conditions {
+    resource_types = var.conditions["resource_types"]
+    cond_type      = var.conditions["cond_type"]
+    attribute      = var.conditions["attribute"]
+    operator       = var.conditions["operator"]
+    value          = var.conditions["value"]
+  }
 
   guidelines = var.guidelines
 

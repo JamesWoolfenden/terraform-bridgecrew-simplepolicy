@@ -1,5 +1,4 @@
 variable "conditions" {
-  type        = string
   description = "Simple policy block"
 }
 
@@ -24,14 +23,17 @@ variable "cis_azure_v12" {
 }
 
 variable "cis_azure_v13" {
+  type    = list(any)
   default = []
 }
 
 variable "cis_docker_v11" {
+  type    = list(any)
   default = []
 }
 
 variable "cis_eks_v11" {
+  type    = list(any)
   default = []
 }
 

@@ -39,13 +39,13 @@ module "policy" {
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_bridgecrew"></a> [bridgecrew](#requirement\_bridgecrew) | 0.2.2 |
+| <a name="requirement_bridgecrew"></a> [bridgecrew](#requirement\_bridgecrew) | 0.1.4 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_bridgecrew"></a> [bridgecrew](#provider\_bridgecrew) | 0.2.2 |
+| <a name="provider_bridgecrew"></a> [bridgecrew](#provider\_bridgecrew) | 0.1.4 |
 
 ## Modules
 
@@ -55,7 +55,7 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [bridgecrew_simple_policy.new](https://registry.terraform.io/providers/JamesWoolfenden/bridgecrew/0.2.2/docs/resources/simple_policy) | resource |
+| [bridgecrew_simple_policy.new](https://registry.terraform.io/providers/PaloAltoNetworks/bridgecrew/0.1.4/docs/resources/simple_policy) | resource |
 
 ## Inputs
 
@@ -66,15 +66,15 @@ No modules.
 | <a name="input_cis_aws_v13"></a> [cis\_aws\_v13](#input\_cis\_aws\_v13) | n/a | `list(any)` | `[]` | no |
 | <a name="input_cis_azure_v11"></a> [cis\_azure\_v11](#input\_cis\_azure\_v11) | n/a | `list(any)` | `[]` | no |
 | <a name="input_cis_azure_v12"></a> [cis\_azure\_v12](#input\_cis\_azure\_v12) | n/a | `list(any)` | `[]` | no |
-| <a name="input_cis_azure_v13"></a> [cis\_azure\_v13](#input\_cis\_azure\_v13) | n/a | `list` | `[]` | no |
-| <a name="input_cis_docker_v11"></a> [cis\_docker\_v11](#input\_cis\_docker\_v11) | n/a | `list` | `[]` | no |
-| <a name="input_cis_eks_v11"></a> [cis\_eks\_v11](#input\_cis\_eks\_v11) | n/a | `list` | `[]` | no |
+| <a name="input_cis_azure_v13"></a> [cis\_azure\_v13](#input\_cis\_azure\_v13) | n/a | `list(any)` | `[]` | no |
+| <a name="input_cis_docker_v11"></a> [cis\_docker\_v11](#input\_cis\_docker\_v11) | n/a | `list(any)` | `[]` | no |
+| <a name="input_cis_eks_v11"></a> [cis\_eks\_v11](#input\_cis\_eks\_v11) | n/a | `list(any)` | `[]` | no |
 | <a name="input_cis_gcp_v11"></a> [cis\_gcp\_v11](#input\_cis\_gcp\_v11) | n/a | `list(any)` | `[]` | no |
 | <a name="input_cis_gke_v11"></a> [cis\_gke\_v11](#input\_cis\_gke\_v11) | n/a | `list(any)` | `[]` | no |
 | <a name="input_cis_kubernetes_v15"></a> [cis\_kubernetes\_v15](#input\_cis\_kubernetes\_v15) | n/a | `list(any)` | `[]` | no |
 | <a name="input_cis_kubernetes_v16"></a> [cis\_kubernetes\_v16](#input\_cis\_kubernetes\_v16) | n/a | `list(any)` | `[]` | no |
 | <a name="input_cloud_provider"></a> [cloud\_provider](#input\_cloud\_provider) | n/a | `string` | n/a | yes |
-| <a name="input_conditions"></a> [conditions](#input\_conditions) | Simple policy block | `string` | n/a | yes |
+| <a name="input_conditions"></a> [conditions](#input\_conditions) | Simple policy block | `any` | n/a | yes |
 | <a name="input_frameworks"></a> [frameworks](#input\_frameworks) | List of supported frameworks for this check | `list(string)` | n/a | yes |
 | <a name="input_guidelines"></a> [guidelines](#input\_guidelines) | A good description justifying the check and outlining how to resolve | `string` | n/a | yes |
 | <a name="input_severity"></a> [severity](#input\_severity) | n/a | `string` | n/a | yes |

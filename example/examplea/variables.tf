@@ -1,5 +1,4 @@
 variable "conditions" {
-  type        = string
   description = "Simple policy definition"
 }
 

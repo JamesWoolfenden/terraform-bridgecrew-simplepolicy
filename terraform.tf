@@ -1,8 +1,8 @@
 terraform {
   required_providers {
     bridgecrew = {
-      source  = "JamesWoolfenden/bridgecrew"
-      version = "0.2.2"
+      source  = "PaloAltoNetworks/bridgecrew"
+      version = "0.1.4"
     }
   }
 }
