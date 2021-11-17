@@ -24,7 +24,7 @@ Include **module.policy.tf** this repository as a module in your existing Terraf
 ```terraform
 module "policy" {
   source         = "JamesWoolfenden/simplepolicy/bridgecrew"
-  version        = "0.0.2"
+  version        = "0.0.7"
   guidelines     = var.guidelines
   conditions     = var.conditions
   cloud_provider = var.cloud_provider
