@@ -39,13 +39,13 @@ module "policy" {
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_bridgecrew"></a> [bridgecrew](#requirement\_bridgecrew) | 0.1.4 |
+| <a name="requirement_bridgecrew"></a> [bridgecrew](#requirement\_bridgecrew) | 0.2.1 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_bridgecrew"></a> [bridgecrew](#provider\_bridgecrew) | 0.1.4 |
+| <a name="provider_bridgecrew"></a> [bridgecrew](#provider\_bridgecrew) | 0.2.1 |
 
 ## Modules
 
@@ -55,7 +55,7 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [bridgecrew_simple_policy.new](https://registry.terraform.io/providers/PaloAltoNetworks/bridgecrew/0.1.4/docs/resources/simple_policy) | resource |
+| [bridgecrew_simple_policy.new](https://registry.terraform.io/providers/PaloAltoNetworks/bridgecrew/0.2.1/docs/resources/simple_policy) | resource |
 
 ## Inputs
 
